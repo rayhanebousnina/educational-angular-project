@@ -1,8 +1,24 @@
-<p-sidebar [(visible)]="display" position="left"> Content </p-sidebar>
+<p-sidebar [(visible)]="display" [baseZIndex]="10000">
+  <h1 style="font-weight: normal">Left Sidebar</h1>
+  <p-button
+    type="button"
+    (click)="display = false"
+    label="Save"
+    styleClass="p-button-success"
+  ></p-button>
+  <p-button
+    type="button"
+    (click)="display = false"
+    label="Cancel"
+    styleClass="p-button-secondary"
+  ></p-button>
+</p-sidebar>
 
-<p-button
-  type="text"
+<button
+  pButton
+  pRipple
+  type="button"
   (click)="display = true"
-  icon="pi pi-plus"
-  label="Show"
-></p-button>
+  icon="pi pi-bell"
+  class="p-button-rounded p-button-warning"
+></button>
