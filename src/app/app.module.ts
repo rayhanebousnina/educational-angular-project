@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TabMenuModule } from 'primeng/tabmenu';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [AppComponent],
@@ -12,6 +13,9 @@ import { TabMenuModule } from 'primeng/tabmenu';
     AppRoutingModule,
     BrowserAnimationsModule,
     TabMenuModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'),
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
