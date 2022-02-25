@@ -7,6 +7,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { SidebarComponent } from './layouts/sidebar/sidebar.component';
+import { DashbordModule } from './features/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, SidebarComponent],
@@ -16,6 +17,7 @@ import { SidebarComponent } from './layouts/sidebar/sidebar.component';
     BrowserAnimationsModule,
     SidebarModule,
     ButtonModule,
+    DashbordModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
