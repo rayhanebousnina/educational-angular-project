@@ -1,0 +1,27 @@
+<!-- <span class="p-input-icon-left">
+  <i class="pi pi-search"></i>
+  <input type="text" pInputText [(ngModel)]="name" placeholder="Name" />
+</span> -->
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <label>
+    First Name :
+    <input
+      pInputText
+      name="firstname"
+      [(ngModel)]="person.firstName"
+      required
+    />
+  </label>
+  <label>
+    Last Name :
+    <input pInputText name="lastName" [(ngModel)]="person.lastName" required />
+  </label>
+
+  <button pButton pRipple class="p-button-warning" type="submit">Submit</button>
+  <!-- <p-button
+    label="Submit"
+    type="submit"
+    [disabled]="!profileForm.checkValidity()"
+    >Rayhane</p-button -->
+</form>
+<h3>{{ form.value | json }}</h3>

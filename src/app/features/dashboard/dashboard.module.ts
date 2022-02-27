@@ -5,10 +5,9 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
-  declarations: [HomeComponent, ContactComponent],
+  declarations: [HomeComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

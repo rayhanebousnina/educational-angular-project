@@ -8,6 +8,7 @@ import { ButtonModule } from 'primeng/button';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { SidebarComponent } from './layouts/sidebar/sidebar.component';
 import { DashbordModule } from './features/dashboard/dashboard.module';
+import { ContactModule } from './features/contact/contact.module';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, SidebarComponent],
@@ -18,6 +19,7 @@ import { DashbordModule } from './features/dashboard/dashboard.module';
     SidebarModule,
     ButtonModule,
     DashbordModule,
+    ContactModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
