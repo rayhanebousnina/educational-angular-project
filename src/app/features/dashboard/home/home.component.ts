@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   public options: any;
   constructor() {}
 
+  //Hello world
   ngOnInit(): void {
     this.options = {
       color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
