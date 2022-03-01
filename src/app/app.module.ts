@@ -9,6 +9,7 @@ import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { SidebarComponent } from './layouts/sidebar/sidebar.component';
 import { DashbordModule } from './features/dashboard/dashboard.module';
 import { ContactModule } from './features/contact/contact.module';
+import { SharedService } from './shared.service';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, SidebarComponent],
@@ -21,7 +22,7 @@ import { ContactModule } from './features/contact/contact.module';
     DashbordModule,
     ContactModule,
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
