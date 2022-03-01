@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
+import { SharedService } from 'src/app/shared.service';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +10,13 @@ import * as echarts from 'echarts';
 export class HomeComponent implements OnInit {
   // echarts
   public options: any;
-  constructor() {}
-
+  constructor(private sharedService: SharedService) {}
+  public firstName = '';
+  public lastName = '';
   //Hello world
   ngOnInit(): void {
+    this.firstName = this.sharedService.name;
+    this.lastName = this.sharedService.lastName;
     this.options = {
       color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
       title: {
