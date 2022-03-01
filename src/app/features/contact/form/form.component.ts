@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { PersonService } from 'src/app/shared/person.service';
 import { personInterface } from '../data/personInterface';
 
 @Component({
@@ -10,14 +11,16 @@ import { personInterface } from '../data/personInterface';
 export class FormComponent implements OnInit {
   @Input()
   person: personInterface = {
-    firstName: 'Rayhane',
-    lastName: 'Bousnina',
+    firstName: '',
+    lastName: '',
   };
 
-  constructor() {}
+  constructor(private personService: PersonService) {}
 
   ngOnInit(): void {}
   onSubmit(form: NgForm) {
     console.log(form.valid, 'submitted');
+    this.personService.person.firstName = this.person.firstName;
+    this.personService.person.lastName = this.person.lastName;
   }
 }
