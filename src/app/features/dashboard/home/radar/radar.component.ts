@@ -13,9 +13,13 @@ export class RadarComponent implements OnInit {
     this.options = {
       title: {
         text: 'Basic Radar Chart',
+        textStyle: {
+          fontSize: 12,
+        },
       },
       legend: {
         data: ['Allocated Budget', 'Actual Spending'],
+        left: '74%',
       },
       radar: {
         // shape: 'circle',

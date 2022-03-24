@@ -14,6 +14,9 @@ export class LineComponent implements OnInit {
       color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
       title: {
         text: 'Gradient Stacked Area Chart',
+        textStyle: {
+          fontSize: 12,
+        },
       },
       tooltip: {
         trigger: 'axis',
@@ -26,6 +29,8 @@ export class LineComponent implements OnInit {
       },
       legend: {
         data: ['Line 1', 'Line 2', 'Line 3', 'Line 4', 'Line 5'],
+        left: '74%',
+        bottom: '76%',
       },
       toolbox: {
         feature: {
