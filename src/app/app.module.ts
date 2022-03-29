@@ -9,6 +9,7 @@ import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { SidebarComponent } from './layouts/sidebar/sidebar.component';
 import { DashbordModule } from './features/dashboard/dashboard.module';
 import { ContactModule } from './features/contact/contact.module';
+import { PersonModule } from './features/person/person.module';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, SidebarComponent],
@@ -20,6 +21,7 @@ import { ContactModule } from './features/contact/contact.module';
     ButtonModule,
     DashbordModule,
     ContactModule,
+    PersonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

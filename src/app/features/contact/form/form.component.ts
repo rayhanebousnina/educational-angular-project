@@ -1,26 +1,71 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { PersonService } from 'src/app/shared/person.service';
-import { personInterface } from '../data/personInterface';
+import { Component, Input, OnInit, Inject } from '@angular/core';
+import { CARD_DATA } from '../data/datagrid-paging-data';
 
+// @Component({
+//   template: `<app-datagrid-card-demo
+//     [dataSet]="data"
+//   ></app-datagrid-card-demo>`,
+// })
+// export class CardFormatterComponent {
+//   public data: any;
+
+//   constructor(@Inject('args') public args: SohoDataGridPostRenderCellArgs) {
+//     this.data = args.value.cardData;
+//   }
+// }
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css'],
 })
-export class FormComponent implements OnInit {
-  @Input()
-  person: personInterface = {
-    firstName: '',
-    lastName: '',
-  };
+export class FormComponent {
+  // public columns: SohoDataGridColumn[] = [
+  //   {
+  //     id: 'cardId',
+  //     name: 'Card Formatter',
+  //     field: 'cardId',
+  //     sortable: false,
+  //     width: 320,
+  //     component: CardFormatterComponent,
+  //     componentInputs: {},
+  //     postRender: true,
+  //   },
+  //   {
+  //     id: 'productId',
+  //     name: 'Product Id',
+  //     field: 'productId',
+  //     sortable: false,
+  //     filterType: 'integer',
+  //     formatter: Soho.Formatters.Readonly,
+  //   },
+  //   {
+  //     id: 'button-formatter',
+  //     name: 'Edit',
+  //     text: 'Edit Row',
+  //     sortable: false,
+  //     icon: 'edit',
+  //     align: 'center',
+  //     formatter: Soho.Formatters.Button,
+  //     click: (_e, args) => this.onClick(args),
+  //   },
+  //   {
+  //     id: 'price',
+  //     name: 'Price (std fmt)',
+  //     field: 'price',
+  //     sortable: false,
+  //     filterType: 'decimal',
+  //     formatter: Soho.Formatters.Decimal,
+  //   },
+  // ];
 
-  constructor(private personService: PersonService) {}
+  // public data = CARD_DATA;
 
-  ngOnInit(): void {}
-  onSubmit(form: NgForm) {
-    console.log(form.valid, 'submitted');
-    this.personService.person.firstName = this.person.firstName;
-    this.personService.person.lastName = this.person.lastName;
-  }
+  constructor() {}
+  // ngOnInit(): void {
+  //   throw new Error('Method not implemented.');
+  // }
+
+  // onClick(args: any) {
+  //   console.log(args);
+  // }
 }

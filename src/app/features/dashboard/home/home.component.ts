@@ -1,7 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  QueryList,
+  ViewChildren,
+  AfterViewInit,
+  OnInit,
+} from '@angular/core';
 
 import { PersonService } from 'src/app/shared/person.service';
 
+// import { SohoDragDirective } from 'ids-enterprise-ng';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -12,6 +19,7 @@ export class HomeComponent implements OnInit {
   public options: any;
   public firstName = '';
   public lastName = '';
+
   constructor(private personService: PersonService) {}
 
   ngOnInit(): void {
