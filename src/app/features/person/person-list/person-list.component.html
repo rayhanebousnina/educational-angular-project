@@ -7,19 +7,19 @@
     <div class="container">
       <div class="row justify-content-between">
         <div class="col-2">
-          <!-- <button
+          <button
             type="button"
             class="btn btn-outline-secondary"
             (click)="onAdd()"
           >
             Add Person
-          </button> -->
+          </button>
         </div>
       </div>
     </div>
 
     <div class="table-responsive">
-      <table class="table mb-0" *ngIf="person">
+      <table class="table mb-0" *ngIf="persondata$ | async as persondata">
         <thead>
           <tr>
             <th>Person Name</th>
@@ -30,7 +30,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let p of person">
+          <tr *ngFor="let p of persondata">
             <td>{{ p.name }}</td>
             <td>{{ p.phone }}</td>
             <td>{{ p.email }}</td>

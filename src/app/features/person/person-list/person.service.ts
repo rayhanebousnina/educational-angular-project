@@ -5,7 +5,7 @@ import { Person } from './person';
 
 @Injectable()
 export class PersonService {
-  private personDetailsUrl = 'api/person';
+  private personDetailsUrl = 'api/person/person.json';
 
   constructor(private http: HttpClient) {}
 
