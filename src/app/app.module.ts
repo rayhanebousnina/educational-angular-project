@@ -10,10 +10,13 @@ import { SidebarComponent } from './layouts/sidebar/sidebar.component';
 import { DashbordModule } from './features/dashboard/dashboard.module';
 import { ContactModule } from './features/contact/contact.module';
 import { PersonModule } from './features/person/person.module';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, SidebarComponent],
   imports: [
+    RouterModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Person } from './person';
 import { PersonService } from './person.service';
-
 @Component({
   selector: 'app-person-list',
   templateUrl: './person-list.component.html',

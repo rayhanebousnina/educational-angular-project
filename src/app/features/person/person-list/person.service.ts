@@ -3,15 +3,13 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, Observable, tap, throwError } from 'rxjs';
 import { Person } from './person';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class PersonService {
   private personDetailsUrl = 'api/person';
 
   constructor(private http: HttpClient) {}
 
-  getPersonDetails(): Observable<Person[]> {
+  getPersonDetails() {
     return this.http.get<Person[]>(this.personDetailsUrl).pipe(
       tap((data) => console.log('Person details: ', JSON.stringify(data))),
       catchError(this.handleError)

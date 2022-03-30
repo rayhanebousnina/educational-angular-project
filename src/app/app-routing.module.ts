@@ -7,7 +7,8 @@ import { PersonListComponent } from './features/person/person-list/person-list.c
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'form', component: FormComponent },
-  { path: 'k', component: PersonListComponent },
+  { path: 'person', component: PersonListComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

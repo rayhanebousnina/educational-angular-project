@@ -6,7 +6,7 @@ import {
   OnInit,
 } from '@angular/core';
 
-import { PersonService } from 'src/app/shared/person.service';
+import { PersonsService } from 'src/app/shared/person.service';
 
 // import { SohoDragDirective } from 'ids-enterprise-ng';
 @Component({
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   public firstName = '';
   public lastName = '';
 
-  constructor(private personService: PersonService) {}
+  constructor(private personService: PersonsService) {}
 
   ngOnInit(): void {
     this.firstName = this.personService.person.firstName;
