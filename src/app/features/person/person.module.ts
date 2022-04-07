@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { ChangeBgService } from './person-list/change-bg.service';
 import { PersonListComponent } from './person-list/person-list.component';
 import { PersonService } from './person-list/person.service';
 @NgModule({
@@ -17,6 +18,6 @@ import { PersonService } from './person-list/person.service';
     FormsModule,
     RouterModule,
   ],
-  providers: [PersonService],
+  providers: [PersonService, ChangeBgService],
 })
 export class PersonModule {}

@@ -1,4 +1,4 @@
-<div class="card">
+<!-- <div class="card">
   <div class="card-header">
     {{ pageTitle }}
   </div>
@@ -41,9 +41,15 @@
       </table>
     </div>
   </div>
-</div>
+</div> -->
 
-<div class="alert alert-danger" *ngIf="errorMessage">
-  {{ errorMessage }}
-</div>
-<h1>Rayhane</h1>
+<button
+  type="button"
+  class="btn btn-outline-secondary"
+  (click)="onChangeClick()"
+  #btn
+>
+  Click me
+</button>
+<div id="mydiv"></div>
+<!-- <h1>{{ changeText$ }}</h1> -->
